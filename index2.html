@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="./funciones.js"></script>
+    <title>TP Integrador Front End Parte 2</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navegacion">
+          <div class="container-fluid" id="navbar">
+            <span id="titulo">Conf Bs As</span>
+            <div class="collapse navbar-collapse" id="nav">
+              <ul class="navbar-nav" id="menu" >
+                <li class="nav-item" >
+                  <a class="nav-link active" aria-current="page" href="#" id="N1">La conferencia</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="N2">Los oradores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="N3">El lugar y la fecha</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="N4">Conviértete en orador</a>
+                </li>
+               <li>
+                  <button type="button" class="btn btn-outline-success" id="boton1">Comprar tickets</button>
+                  
+               </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+            <!--Artículo 1-->
+            <article class="container d-flex" id="descuentos"> 
+                <div id="caja1">
+                    <p ><b>Estudiante</b></p>
+                    <p>Tienen un descuento</p>
+                    <p><b>80%</b></p>
+                    <p class="subtitulo">*presentar documentación</p>
+                </div>
+                <div id="caja2"  >
+                    <p><b>Trainee</b></p>
+                    <p>Tienen un descuento</p>
+                    <p><b>50%</b></p>
+                    <p class="subtitulo">*presentar documentación</p>
+                </div>
+                <div id="caja3">
+                    <p><b>Junior</b></p>
+                    <p>Tienen un descuento</p>
+                    <p><b>15%</b></p>
+                    <p class="subtitulo">*presentar documentación</p>
+                </div>
+            </article>
+
+            <!--Artículo 2-->
+            <article>
+                <div id="tituloVenta">
+                    <p id="titulo2">VENTA</p>
+                    <p id="subtitulo"><b>VALOR DE TICKET $200</b></p>
+                </div>
+            </article>
+
+            <!--Artículo 3-->
+            <article>
+              <!--formulario-->
+              <form class="row g-3 needs-validation" novalidate id="form">
+                <div class="col-md-4" >
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" required >
+                      <div class="valid-feedback">
+                        Looks good!
+                     </div>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Apellido" required>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
+                </div>
+                <div>
+                  <input type="text" class="form-control" id="validationCustom03" placeholder="Correo" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                </div>
+                <div>
+                  <p id="text1">Cantidad</p>
+                  <p id="text2">Categoría</p>
+                  <input type="number" min="0" class="form-control" id="validationCustom04" placeholder="Cantidad" required >
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                </div>
+                    <select class="form-select" id="select">
+                      <option value="1">Estudiante</option>
+                      <option value="2">Trainee</option>
+                      <option value="3">Junior</option>
+                    </select>
+              </form>
+              
+              <div class="alert alert-primary" role="alert" id="alerta">
+                <p>Total a Pagar:$</p>
+              </div>
+            
+              <div>
+                <button type="button" class="btn btn-success" id="button1" onclick="limpiar_campos();">Borrar</button>
+                <button type="button" class="btn btn-success" id="button2" onclick="calcular ();">Resumen</button>
+              </div>
+            </article>
+        </section>
+      </main>
+
+    <footer >
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid" >
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" id="listapie">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="N5">Preguntas frecuentes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="N6">Contáctanos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="N7">Prensa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="N8">Conferencias</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="N9" >Términos y Condiciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="N10" >Privacidad</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="N11" >Estudiantes</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>    
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
